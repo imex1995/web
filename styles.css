@@ -2,10 +2,12 @@
   font-family: "lemon";
   src: url(fonts/LemonMilk.otf);
 }
+
 @font-face {
   font-family: "lemon light";
   src: url(fonts/LemonMilklight.otf);
 }
+
 @font-face {
   font-family: "product";
   src: url(fonts/product-sans.ttf);
@@ -19,22 +21,29 @@ body, html {
   height: 100%;
   margin: 0;
 }
-
+body, html, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
 body {
   background: #171C11;
-  background: linear-gradient(130deg, rgba(30, 39, 25, 1) 0%, rgba(2, 4, 0, 1) 100%);
+  background: linear-gradient(0deg, rgba(30, 39, 25, 1) 0%, rgba(2, 4, 0, 1) 100%);
   overflow: hidden;
   font-family: "lemon light";
   letter-spacing: 5px;
 }
+
 a {
   color: white;
   text-decoration: none;
   font-weight: 100;
 }
-a:focus, a:active {
-  border: none;
+
+a:active, a:focus {
+  outline: 0 !important;
+  border: none !important;
+  -moz-outline-style: none !important;
 }
+
 nav {
   display: grid;
   height: 150px !important;
@@ -42,19 +51,23 @@ nav {
   grid-template-rows: auto;
   z-index: 999999999999
 }
+
 .adam {
   font-family: "product";
   letter-spacing: normal;
   font-size: 1.4em;
   transition: 0.3s;
 }
+
 .adam a:hover {
   color: #ff095a;
   transition: 0.3s
 }
+
 .adam a {
   transition: 0.3s
 }
+
 .nav-logo {
   grid-column: 2;
   width: 400px;
@@ -77,6 +90,7 @@ nav {
   background: none;
   border-radius: 5px;
 }
+
 .menu .bit-1::before {
   content: '';
   left: -0.15em;
@@ -89,6 +103,7 @@ nav {
   transition: transform 0.3s, top 0.3s;
   border-radius: 5px 0 0 5px;
 }
+
 .menu .bit-1::after {
   content: '';
   position: absolute;
@@ -101,6 +116,7 @@ nav {
   transition: transform 0.3s, top 0.3s;
   border-radius: 0px 10px 10px 0px;
 }
+
 .menu .bit-2 {
   position: absolute;
   width: 2em;
@@ -112,6 +128,7 @@ nav {
   transition: transform 0.3s 0.3s, width 0.3s 0.6s;
   border-radius: 5px;
 }
+
 .menu .bit-3::before {
   content: '';
   position: absolute;
@@ -124,6 +141,7 @@ nav {
   transition: transform 0.3s, bottom 0.3s;
   border-radius: 10px 0px 0px 10px;
 }
+
 .menu .bit-3::after {
   content: '';
   position: absolute;
@@ -136,6 +154,7 @@ nav {
   transition: transform 0.3s, bottom 0.3s;
   border-radius: 0px 10px 10px 0px;
 }
+
 .menu.open .bit-1:before {
   top: 0.4em;
   width: 1.2em;
@@ -144,6 +163,7 @@ nav {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FF0000;
 }
+
 .menu.open .bit-1:after {
   top: 0.4em;
   width: 1.2em;
@@ -152,12 +172,14 @@ nav {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FF0000;
 }
+
 .menu.open .bit-2 {
   width: 0.3em;
   transform: translate(-50%, -50%) rotate(45deg);
   transition: transform 0.3s 0.3s, width 0.3s;
   background: #FF0000;
 }
+
 .menu.open .bit-3:before {
   bottom: 0.4em;
   width: 1.2em;
@@ -166,6 +188,7 @@ nav {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
   background: #FF0000;
 }
+
 .menu.open .bit-3:after {
   bottom: 0.4em;
   width: 1.2em;
@@ -184,6 +207,7 @@ nav {
   background: none;
   z-index: 1001101010;
 }
+
 .nav-expand {
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -194,6 +218,7 @@ nav {
   justify-content: flex-end;
   backdrop-filter: blur(5px);
 }
+
 .nav-expand-text {
   width: 550px;
   background: #171C11;
@@ -206,18 +231,30 @@ nav {
   letter-spacing: 10px;
   overflow-y: scroll !important;
 }
-.nav-expand-text::-webkit-scrollbar { width: 0 !important }
-.nav-expand-text { overflow: -moz-scrollbars-none; }
-.nav-expand-text { -ms-overflow-style: none; }
+
+.nav-expand-text::-webkit-scrollbar {
+  width: 0 !important
+}
+
+.nav-expand-text {
+  overflow: -moz-scrollbars-none;
+}
+
+.nav-expand-text {
+  -ms-overflow-style: none;
+}
+
 .nav-link h1 {
   margin: 40px 0 !important;
 }
+
 .nav-link:hover {
   -webkit-text-stroke-width: 0.05px;
   -webkit-text-stroke-color: white;
   -webkit-text-fill-color: rgba(100, 200, 0, 0);
   transition: 0.3s;
 }
+
 .credit {
   font-size: 0.7em;
   top: 70px;
@@ -227,10 +264,6 @@ nav {
   text-align: center;
   padding-top: 50px;
 }
-
-
-
-
 
 .socials {
   position: absolute;
@@ -243,17 +276,27 @@ nav {
   color: white;
   font-size: 0.75em;
 }
+
 .socials a:hover {
   color: #999;
   transition: 0.3s;
 }
+
 .socials a {
   transition: 0.3s;
 }
-
-
-
+@keyframes carousel {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .carousel {
+  animation: carousel 1s ease;
   width: 150%;
   margin: 0px auto;
   margin-left: -25%;
@@ -287,6 +330,7 @@ nav {
   overflow: show;
   height: 50%;
 }
+
 .slick-slide:hover {
   transform: scale(0.63);
   filter: blur(2px)
@@ -301,12 +345,14 @@ nav {
   height: 100%;
   border: none !important;
 }
+
 .slick-current:hover {
   transform: scale(1.087);
   filter: blur(0px);
   transition: 0.8s;
 }
-.slick-slide:hover .title{
+
+.slick-slide:hover .title {
   transform: scale(1.07);
   transition: 1.4s;
 }
@@ -321,6 +367,7 @@ nav {
   cursor: pointer;
   filter: blur(3.5px);
 }
+
 .slick-current {
   transform: scale(1);
   transition: 0.3s;
@@ -330,21 +377,24 @@ nav {
   margin: 0;
   filter: blur(0px);
 }
+
 .slick-center {
   pointer-events: all;
 }
+
 .slide-link {
   position: absolute;
   pointer-events: none;
 }
 
-.img,
-.slide-link {
+.img, .slide-link {
   display: inline-block;
 }
+
 .slick-current .title {
   display: flex;
 }
+
 .slick-current .slide-link {
   pointer-events: all;
 }
@@ -353,4 +403,41 @@ nav {
   width: 100%;
   height: auto;
   border: 2px solid #fff;
+}
+
+
+
+.about-contain {
+  display: flex;
+  height: calc(100% - 300px);
+  justify-content: center;
+  align-items: center;
+}
+.about-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  width: 80%;
+  max-width: 1176px;
+}
+.about-img {
+  margin: auto;
+  margin: 9px 20px 0 auto;
+  width: 70%;
+}
+.about-heading {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  font-size: 2.5em;
+  font-family: "lemon light";
+  color: white;
+}
+.about-p {
+  font-family: "Raleway";
+  letter-spacing: normal;
+  color: white;
+  grid-column: 2 / 4;
+  grid-row: 1;
+  font-size: 1.1em;
+  margin-top: 50px;
 }
