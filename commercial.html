@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lucio Arellano</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css" />
+  <link rel="icon" href="img/icon.png" type="icon/png">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body class="list-body">
+  <nav>
+    <img class="nav-logo" src="img/logo.png" alt="">
+    <div class="top-nav">
+      <div class="menu">
+        <div class="bit-1"></div>
+        <div class="bit-2"></div>
+        <div class="bit-3"></div>
+      </div>
+    </div>
+    <div class="nav-expand">
+      <div class="nav-expand-text">
+        <a class="nav-link" href="index.html">
+          <h1>home</h1>
+        </a>
+        <a class="nav-link" href="about.html">
+          <h1>about</h1>
+        </a>
+        <a class="nav-link" href="commercial.html">
+          <h1>commercial</h1>
+        </a>
+        <a class="nav-link" href="professional.html">
+          <h1>professional</h1>
+        </a>
+        <a class="nav-link" href="contact.html">
+          <h1>contact lucio</h1>
+        </a>
+
+        <h1 class="credit">Made with <span class=adam><a target=_blank href="https://adamgaff.com">adamgaff.com</a></span></h1>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="socials">
+    <h3><a target=_blank href="https://vimeo.com/user63456036">vimeo</a> / <a target=_blank href="https://www.instagram.com/sultrysultan/">instagram</a> / <a target=_blank href="https://filmfreeway.com/LucioArellano">film freeway</a> / <a target=_blank href="https://www.linkedin.com/in/lucio-arellano-258772101/">linkedin</a></h3>
+  </div>
+
+
+  <div class="list-main">
+    <h1 class="list-title">commercial work</h1>
+    <a href="#">
+      <div class="card">
+        <img class="card-img" src="img/stills/Gyro/gyro.png" alt="">
+        <h1 class="card-h1">Gyro</h1>
+        <p class="card-p">Promotional Social Media Ad shot for Ian’s Pizza Milwaukee
+        </p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <img class="card-img" src="img/stills/Kielbasa_Mac/kielbasa.png" alt="">
+        <h1 class="card-h1">Kielbasa Mac Promo</h1>
+        <p class="card-p">Promotional Social Media Ad shot for Ian’s Pizza Milwaukee
+        </p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <img class="card-img" src="img/stills/Mac2School/mac.png" alt="">
+        <h1 class="card-h1">Mac 2 school</h1>
+        <p class="card-p">Promotional Social Media Ad shot for Ian’s Pizza Milwaukee
+        </p>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- javascript stuff -->
+
+  <!-- nav -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".nav-expand-text").hide();
+      $(".nav-expand").hide();
+
+      function nav() {
+        $(".menu").click(function() {
+          $(".nav-expand").toggle("fade", {
+            duration: 800,
+          });
+          $(".nav-expand-text").toggle("slide", {
+            direction: "right",
+            duration: 800,
+          });
+        });
+      }
+      nav();
+
+      $(".nav-expand").click(function() {
+        $(".nav-expand").toggle("fade");
+        $(".nav-expand-text").toggle("slide", {
+          direction: "right"
+        });
+      });
+      $(".nav-link").click(function() {
+        $(".nav-expand").slideUp(600);
+      })
+    });
+  </script>
+
+  <script type="text/javascript">
+    var menu = document.querySelector('.menu');
+    var nav = document.querySelector('.nav-expand');
+
+    function toggleMenu() {
+      menu.classList.toggle('open');
+    }
+    menu.addEventListener('click', toggleMenu);
+    nav.addEventListener('click', toggleMenu);
+  </script>
+
+
+</body>
+
+</html>

@@ -17,19 +17,25 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
+html {
+  min-height: 100%;
+}
+body{
+  min-height: 100%;
 }
 body, html, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 body {
-  background: #171C11;
+  background: rgba(30, 39, 25, 1);
   background: linear-gradient(0deg, rgba(30, 39, 25, 1) 0%, rgba(2, 4, 0, 1) 100%);
   overflow: hidden;
   font-family: "lemon light";
   letter-spacing: 5px;
+  color: white;
+}
+.list-body {
+  overflow-y: scroll;
 }
 
 a {
@@ -49,7 +55,8 @@ nav {
   height: 150px !important;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  z-index: 999999999999
+  z-index: 999999999999;
+  display: fixed;
 }
 
 .adam {
@@ -81,7 +88,7 @@ nav {
   margin-left: 5px;
   width: 23px;
   height: 3em;
-  display: flex;
+  display: fixed;
   justify-content: center;
   align-items: center;
   padding-right: 25px;
@@ -266,15 +273,14 @@ nav {
 }
 
 .socials {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 150px);
-  display: flex;
+  position: fixed;
+  bottom: 0;
   justify-content: flex-start;
   align-items: flex-end;
   padding: 0 0 40px 75px;
   color: white;
   font-size: 0.75em;
+  z-index: 999;
 }
 
 .socials a:hover {
@@ -285,7 +291,7 @@ nav {
 .socials a {
   transition: 0.3s;
 }
-@keyframes carousel {
+@keyframes slideUp {
   0% {
     opacity: 0;
     transform: translateY(50px);
@@ -296,7 +302,7 @@ nav {
   }
 }
 .carousel {
-  animation: carousel 1s ease;
+  animation: slideUp 1s ease;
   width: 150%;
   margin: 0px auto;
   margin-left: -25%;
@@ -409,9 +415,12 @@ nav {
 
 .about-contain {
   display: flex;
-  height: calc(100% - 300px);
+  height: 100% !important;
   justify-content: center;
   align-items: center;
+  margin-top: 4vw;
+  margin-bottom: 100px;
+  animation: slideUp 0.7s ease;
 }
 .about-main {
   display: grid;
@@ -422,8 +431,10 @@ nav {
 }
 .about-img {
   margin: auto;
-  margin: 9px 20px 0 auto;
+  margin: 9px 40px 0 auto;
   width: 70%;
+  animation: slideUp 0.7s ease;
+
 }
 .about-heading {
   grid-column: 2 / 4;
@@ -439,5 +450,67 @@ nav {
   grid-column: 2 / 4;
   grid-row: 1;
   font-size: 1.1em;
-  margin-top: 50px;
+  margin-top: 70px;
+}
+
+
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+  flex-wrap: wrap;
+  height: 55vh;
+  animation: slideUp 0.7s ease;
+  z-index: 999999999999 !important;
+}
+.contact-main h1 {
+  animation: slideUp 1s ease;
+
+}
+.contact-p {
+  font-family: "Raleway";
+  letter-spacing: normal;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+.contact-p span a{
+  font-weight: 500 !important;
+}
+
+
+.list-main {
+  margin-bottom: 100px;
+}
+.list-title {
+  text-align: center;
+  font-size: 4em;
+  margin: 70px 0 100px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 400px 700px;
+  grid-template-rows: auto;
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+.card-img {
+  width: 400px;
+  padding-right: 15px;
+}
+.card-h1 {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  height: 50px;
+  font-size: 3em;
+}
+.card-p {
+  font-family: "Raleway";
+  letter-spacing: normal;
+  grid-column: 2 / 3;
+  grid-row: 1;
+  height: calc(100% - 50px);
+  margin-top: 60px;
 }
