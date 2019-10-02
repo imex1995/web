@@ -18,12 +18,12 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   html {
     min-height: 100%;
   }
   body {
-    min-height: 100%;
+    min-height: 100% !important;
   }
   body, html, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -283,8 +283,8 @@
   }
   .title {
     width: 110%;
-    margin-top: -4vw;
-    font-size: 5vw;
+    margin-top: -5vw;
+    font-size: 4vw;
     text-align: right;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: white;
@@ -404,26 +404,45 @@
     font-size: 1.1em;
     margin-top: 70px;
   }
-  .contact-main {
+  .contact-contain {
     display: flex;
+    height: 100% !important;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    color: white;
-    flex-wrap: wrap;
-    height: 55vh;
+    margin-top: 8vw;
+    margin-bottom: 100px;
     animation: slideUp 0.7s ease;
-    z-index: 999999999999 !important;
   }
-  .contact-main h1 {
-    animation: slideUp 1s ease;
+  .contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    width: 80%;
+    max-width: 1176px;
+    margin: auto;
+  }
+  .contact-img {
+    margin: auto;
+    margin: 9px 20px 0 auto;
+    width: 80%;
+    animation: slideUp 0.7s ease;
+  }
+  .contact-heading {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    font-size: 2.5em;
+    font-family: "lemon light";
+    letter-spacing: 0.2em;
+    color: white;
   }
   .contact-p {
     font-family: "Raleway";
     letter-spacing: normal;
-    width: 100%;
-    text-align: center;
-    margin-top: 5px;
+    color: white;
+    grid-column: 2 / 4;
+    grid-row: 1;
+    font-size: 1em;
+    margin-top: 60px;
   }
   .contact-p span a {
     font-weight: 500 !important;
@@ -475,12 +494,12 @@
 
 /* mobile */
 
-@media screen and (max-width: 1099px) {
-  html {
+@media screen and (max-width: 999px) {
+  html, head {
     min-height: 100%;
   }
   body {
-    min-height: 100%;
+    min-height: 100% !important;
   }
   body, html, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -529,12 +548,12 @@
   }
   .nav-logo {
     grid-column: 1;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    margin-right: 0
+    margin-left: 8%;
   }
   .menu {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 0px;
     width: 23px;
     height: 3em;
@@ -543,7 +562,7 @@
     align-items: center;
     margin-right: 50px;
     position: relative;
-    transform: scale(1.5);
+    transform: scale(2);
     background: none;
     border-radius: 5px;
   }
@@ -726,15 +745,16 @@
     100% {
       opacity: 1;
       transform: translateY(0px);
+      transform: scale(2);
     }
   }
   .carousel {
     animation: slideUp 1s ease;
     width: 100%;
-    margin: 0px auto;
-    margin-left: -25%;
+    height: 100%;
     display: flex;
-    margin-top: 5%
+    justify-content: center;
+    transform: scale(2);
   }
   .title {
     width: 110%;
@@ -752,9 +772,6 @@
     height: 7vw;
     align-items: flex-end;
     transition: 0.5s;
-  }
-  .carousel div {
-    width: auto;
   }
   .slick-list {
     overflow: show;
