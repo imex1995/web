@@ -84,18 +84,36 @@
   <script type="text/javascript" src="slick/slick/slick.min.js"></script>
 
   <script type="text/javascript">
+
+const mq = window.matchMedia("(max-width: 999px)");
     $(document).ready(function() {
-      $('.carousel').slick({
-        autoplay: false,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinte: true,
-        centerPadding: "10%",
-        arrows: false,
-        adaptiveHeight: true,
-        focusOnSelect: true,
-      });
+
+      if (mq.matches) {
+        $('.carousel').slick({
+          autoplay: false,
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinte: true,
+          centerPadding: "10%",
+          arrows: false,
+          adaptiveHeight: true,
+          focusOnSelect: true,
+        });
+      } else {
+        $('.carousel').slick({
+          autoplay: false,
+          centerMode: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinte: true,
+          centerPadding: "10%",
+          arrows: false,
+          adaptiveHeight: true,
+          focusOnSelect: true,
+        });
+      }
+
     });
   </script>
 
