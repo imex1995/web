@@ -527,8 +527,7 @@
     margin: 0;
   }
   body {
-    background: rgba(30, 39, 25, 1);
-    background: linear-gradient(0deg, rgba(30, 39, 25, 1) 0%, rgba(2, 4, 0, 1) 100%);
+    background: #161919;
     overflow: hidden;
     font-family: "lemon light";
     letter-spacing: 5px;
@@ -570,7 +569,7 @@
   }
   .nav-logo {
     grid-column: 1;
-    width: 90%;
+    width: 80%;
     margin: auto;
     margin-left: 8%;
   }
@@ -584,7 +583,7 @@
     align-items: center;
     margin-right: 50px;
     position: relative;
-    transform: scale(2);
+    transform: scale(1.5);
     background: none;
     border-radius: 0px;
   }
@@ -610,7 +609,7 @@
     height: 0.25em;
     background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   .menu .bit-2 {
     position: absolute;
@@ -633,7 +632,7 @@
     height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 00px 0px 0px 10px;
+    border-radius: 00px 0px 0px 0px;
   }
   .menu .bit-3::after {
     content: '';
@@ -645,7 +644,7 @@
     height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   .menu.open .bit-1:before {
     top: 0.4em;
@@ -706,7 +705,7 @@
   }
   .nav-expand-text {
     width: 100%;
-    background: #171C11;
+    background: #161919;
     height: 100%;
     text-align: right;
     padding: 50px;
@@ -749,7 +748,7 @@
     align-items: flex-end;
     padding: 0 0 60px 75px;
     color: white;
-    font-size: 2em;
+    font-size: 1.3em;
     line-height: 1.7em;
     width: 100%;
     z-index: 999;
@@ -868,11 +867,8 @@
   }
   .about-contain {
     display: flex;
-    height: 100% !important;
     justify-content: center;
     align-items: center;
-    margin-top: 4vw;
-    margin-bottom: 100px;
     animation: slideUp 0.7s ease;
   }
   .about-main {
@@ -880,20 +876,27 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     width: 80%;
-    max-width: 1176px;
   }
   .about-img {
     margin: auto;
     grid-row: 1;
-    width: 70%;
-    animation: slideUp 0.7s ease;
+    grid-column: 1 / 2;
+    width: 100%;
   }
   .about-heading {
     grid-row: 2;
-    font-size: 2.5em;
-    text-align: center;
-    font-family: "lemon light";
+    font-size: 8em;
+    text-align: left;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: rgba(100, 200, 0, 0);
+    font-family: "lemon";
+    letter-spacing: 7px;
     color: white;
+    grid-row: 1;
+    margin-top: 105%;
+    margin-left: -25px;
+    grid-column: 1 / 2;
   }
   .about-p {
     font-family: "Raleway";
@@ -901,7 +904,8 @@
     color: white;
     grid-row: 3;
     font-size: 1.1em;
-    margin-top: 70px;
+    margin-top: 0px;
+    margin-bottom: 200px;
   }
   .contact-main {
     display: flex;
