@@ -52,7 +52,9 @@
   </div>
 
   <div class="swipe">
-    <p>< SWIPE ></p>
+    <p>
+      < SWIPE>
+    </p>
   </div>
   <div class="carousel">
     <div class="slide">
@@ -86,8 +88,7 @@
   <script type="text/javascript" src="slick/slick/slick.min.js"></script>
 
   <script type="text/javascript">
-
-const mq = window.matchMedia("(max-width: 999px)");
+    const mq = window.matchMedia("(max-width: 999px)");
     $(document).ready(function() {
 
       if (mq.matches) {
@@ -115,7 +116,9 @@ const mq = window.matchMedia("(max-width: 999px)");
           focusOnSelect: true,
         });
       }
-
+      window.addEventListener('touchstart', function() {
+        $(".swipe").fadeOut("slow","swing")
+      });
     });
   </script>
 

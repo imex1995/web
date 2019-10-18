@@ -20,7 +20,7 @@
 /* desktop */
 @media screen and (min-width: 1000px) {
   .swipe {
-  display: none; 
+  display: none;
   }
   html {
     min-height: 100%;
@@ -32,8 +32,8 @@
     margin: 0;
   }
   body {
-    background: rgba(30, 39, 25, 1);
     background: linear-gradient(0deg, rgba(30, 39, 25, 1) 0%, rgba(2, 4, 0, 1) 100%);
+    background: #161919;
     overflow: hidden;
     font-family: "lemon light";
     letter-spacing: 5px;
@@ -75,7 +75,7 @@
   }
   .nav-logo {
     grid-column: 2;
-    width: 400px;
+    width: 250px;
     text-align: center;
     margin: auto;
     margin-top: 75px
@@ -92,7 +92,9 @@
     position: relative;
     transform: scale(0.8);
     background: none;
-    border-radius: 5px;
+    border-radius: 0px;
+    cursor: pointer;
+    transform: scale(0.7);
   }
   .menu .bit-1::before {
     content: '';
@@ -101,10 +103,10 @@
     position: absolute;
     width: 1em;
     transform-origin: left bottom;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0px 0 0 0px;
   }
   .menu .bit-1::after {
     content: '';
@@ -113,21 +115,21 @@
     top: 0.5em;
     width: 1em;
     transform-origin: right bottom;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
   .menu .bit-2 {
     position: absolute;
     width: 2em;
     top: 50%;
     left: 50%;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transform: translate(-50%, -50%);
     transition: transform 0.3s 0.3s, width 0.3s 0.6s;
-    border-radius: 5px;
+    border-radius: 0px;
   }
   .menu .bit-3::before {
     content: '';
@@ -136,10 +138,10 @@
     left: -0.15em;
     width: 1em;
     transform-origin: left top;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 0px 0px 0px 0px;
   }
   .menu .bit-3::after {
     content: '';
@@ -148,10 +150,10 @@
     right: -0.15em;
     width: 1em;
     transform-origin: right top;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 00px 0px 0px;
   }
   .menu.open .bit-1:before {
     top: 0.4em;
@@ -201,7 +203,7 @@
     z-index: 1001101010;
   }
   .nav-expand {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     position: fixed;
     z-index: 100;
@@ -212,7 +214,7 @@
   }
   .nav-expand-text {
     width: 550px;
-    background: #171C11;
+    background: #17191B;
     height: 100%;
     text-align: right;
     margin-left: calc(100% - 550px);
@@ -256,8 +258,9 @@
     align-items: flex-end;
     padding: 0 0 40px 75px;
     color: white;
-    font-size: 0.75em;
+    font-size: 0.6em;
     z-index: 999;
+    letter-spacing: 0.6em;
   }
   .socials a:hover {
     color: #999;
@@ -310,7 +313,6 @@
   }
   .slick-slide:hover {
     transform: scale(0.63);
-    filter: blur(2px)
   }
   .slick-slide {
     transition: 0.3s;
@@ -337,7 +339,6 @@
     opacity: .5;
     height: 100%;
     cursor: pointer;
-    filter: blur(3.5px);
   }
   .slick-current {
     transform: scale(1);
@@ -380,32 +381,39 @@
   }
   .about-main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
     width: 80%;
     max-width: 1176px;
   }
   .about-img {
-    margin: auto;
-    margin: 9px 40px 0 auto;
-    width: 70%;
-    animation: slideUp 0.7s ease;
+    max-width: 300px;
+    grid-column: 1 / 3;
+    grid-row: 1;
   }
   .about-heading {
-    grid-column: 2 / 4;
+    grid-column: 1 / 3;
     grid-row: 1;
-    font-size: 2.5em;
-    font-family: "lemon light";
+    font-size: 3.7em;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: rgba(100, 200, 0, 0);
+    font-family: "lemon";
+    letter-spacing: 7px;
     color: white;
+    height: 50px;
+    margin-top: 250px;
+    margin-left: -25px;
+    max-width: 300px;
   }
   .about-p {
     font-family: "Raleway";
     letter-spacing: normal;
     color: white;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     grid-row: 1;
     font-size: 1.1em;
-    margin-top: 70px;
+    margin-left: 20%;
   }
   .contact-contain {
     display: flex;
@@ -418,34 +426,45 @@
   }
   .contact-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     width: 80%;
     max-width: 1176px;
     margin: auto;
   }
   .contact-img {
     margin: auto;
-    margin: 9px 20px 0 auto;
     width: 80%;
     animation: slideUp 0.7s ease;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    max-width: 500px;
   }
   .contact-heading {
-    grid-column: 2 / 4;
+    grid-column: 1 / 2;
     grid-row: 1;
-    font-size: 2.5em;
-    font-family: "lemon light";
+    font-size: 5em;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: rgba(100, 200, 0, 0);
+    font-family: "lemon";
+    letter-spacing: 7px;
     letter-spacing: 0.2em;
     color: white;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: -30px;
   }
   .contact-p {
     font-family: "Raleway";
     letter-spacing: normal;
     color: white;
-    grid-column: 2 / 4;
-    grid-row: 1;
+    grid-column: 1 / 2;
+    grid-row: 2;
     font-size: 1em;
-    margin-top: 60px;
+    margin: auto;
+    margin-top: 10px;
+    max-width: 500px;
   }
   .contact-p span a {
     font-weight: 500 !important;
@@ -567,7 +586,7 @@
     position: relative;
     transform: scale(2);
     background: none;
-    border-radius: 5px;
+    border-radius: 0px;
   }
   .menu .bit-1::before {
     content: '';
@@ -576,10 +595,10 @@
     position: absolute;
     width: 1em;
     transform-origin: left bottom;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0px 0 0 0px;
   }
   .menu .bit-1::after {
     content: '';
@@ -588,7 +607,7 @@
     top: 0.5em;
     width: 1em;
     transform-origin: right bottom;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, top 0.3s;
     border-radius: 0px 10px 10px 0px;
@@ -598,11 +617,11 @@
     width: 2em;
     top: 50%;
     left: 50%;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transform: translate(-50%, -50%);
     transition: transform 0.3s 0.3s, width 0.3s 0.6s;
-    border-radius: 5px;
+    border-radius: 0px;
   }
   .menu .bit-3::before {
     content: '';
@@ -611,10 +630,10 @@
     left: -0.15em;
     width: 1em;
     transform-origin: left top;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 00px 0px 0px 10px;
   }
   .menu .bit-3::after {
     content: '';
@@ -623,7 +642,7 @@
     right: -0.15em;
     width: 1em;
     transform-origin: right top;
-    height: 0.3em;
+    height: 0.25em;
     background: #fff;
     transition: transform 0.3s, bottom 0.3s;
     border-radius: 0px 10px 10px 0px;
@@ -750,11 +769,26 @@
     100% {
       opacity: 1;
       transform: translateY(0px);
-      transform: scale(2);
+    }
+  }
+  @keyframes flash {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
     }
   }
   .swipe {
-
+    position: absolute;
+    top: 32%;
+    left: 31%;
+    font-size: 2.3em;
+    letter-spacing: 0.7em;
+    animation: flash 2s ease infinite;
   }
   .carousel {
     height: 70%;
@@ -843,21 +877,21 @@
   }
   .about-main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     width: 80%;
     max-width: 1176px;
   }
   .about-img {
     margin: auto;
-    margin: 9px 40px 0 auto;
+    grid-row: 1;
     width: 70%;
     animation: slideUp 0.7s ease;
   }
   .about-heading {
-    grid-column: 2 / 4;
-    grid-row: 1;
+    grid-row: 2;
     font-size: 2.5em;
+    text-align: center;
     font-family: "lemon light";
     color: white;
   }
@@ -865,8 +899,7 @@
     font-family: "Raleway";
     letter-spacing: normal;
     color: white;
-    grid-column: 2 / 4;
-    grid-row: 1;
+    grid-row: 3;
     font-size: 1.1em;
     margin-top: 70px;
   }
