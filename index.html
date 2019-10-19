@@ -87,7 +87,7 @@
 
       if (mq.matches) {
         $('.carousel').slick({
-          autoplay: false,
+          autoplay: true,
           centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -96,6 +96,8 @@
           arrows: false,
           adaptiveHeight: true,
           focusOnSelect: true,
+          speed: 1000,
+          autoplaySpeed: 5000
         });
       } else {
         $('.carousel').slick({
