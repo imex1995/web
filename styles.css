@@ -20,8 +20,23 @@
 /* desktop */
 
 @media screen and (min-width: 1000px) {
-  .swipe {
-    display: none;
+  ::-moz-selection {
+    background: rgba(255, 255, 255, 0.99);
+    color: black;
+  }
+  ::selection {
+    background: rgba(255, 255, 255, 0.99);
+    color: black;
+  }
+  img, h1, h2, h3, h4, h5, h6 {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
   }
   html {
     min-height: 100%;
@@ -489,7 +504,7 @@
     grid-template-columns: 400px auto;
     grid-template-rows: auto;
     margin: 0 5%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   .card-img {
     grid-column: 1;
@@ -515,11 +530,14 @@
     grid-column: 2 / 3;
     grid-row: 1;
     height: calc(100% - 50px);
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 0.9em;
   }
   .card-p span {
     font-weight: 500 !important;
+  }
+  .card-p-title {
+    font-size: 1.5em;
   }
 }
 
@@ -528,6 +546,9 @@
 @media screen and (max-width: 999px) {
   html, head {
     height: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
   }
   body {
     height: 100%;
@@ -757,7 +778,7 @@
     align-items: flex-end;
     padding: 0 0 60px 75px;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.7em;
     width: 100%;
     z-index: 999;
@@ -911,7 +932,7 @@
     letter-spacing: normal;
     color: white;
     grid-row: 3;
-    font-size: 1.1em;
+    font-size: 2.5em;
     margin-top: 0px;
     margin-bottom: 200px;
   }
@@ -943,6 +964,7 @@
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: white;
     -webkit-text-fill-color: rgba(100, 200, 0, 0);
+    font-size: 8em;
     font-family: "lemon";
     letter-spacing: 7px;
     letter-spacing: 0.2em;
@@ -984,7 +1006,7 @@
     margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
   .card-img {
     width: 100%;
@@ -996,7 +1018,7 @@
     height: 50px;
     margin-left: -20px;
     font-size: 7vw;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: white;
     -webkit-text-fill-color: rgba(100, 200, 0, 0);
     font-family: "lemon";
@@ -1006,9 +1028,12 @@
     letter-spacing: normal;
     grid-row: 3;
     margin-top: 20px;
-    font-size: 0.8em !important;
+    font-size: 1em;
   }
   .card-p span {
     font-weight: 500 !important;
+  }
+  .card-p-title {
+    font-size: 2em;
   }
 }
