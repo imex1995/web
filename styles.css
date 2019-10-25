@@ -115,7 +115,7 @@
   .menu .bit-1::before {
     content: '';
     left: -0.15em;
-    top: 0.5em;
+    top: 0.5em !important;
     position: absolute;
     width: 1em;
     transform-origin: left bottom;
@@ -128,7 +128,7 @@
     content: '';
     position: absolute;
     right: -0.15em;
-    top: 0.5em;
+    top: 0.5em !important;
     width: 1em;
     transform-origin: right bottom;
     height: 0.25em;
@@ -150,7 +150,7 @@
   .menu .bit-3::before {
     content: '';
     position: absolute;
-    bottom: 0.5em;
+    bottom: 0.5em !important;
     left: -0.15em;
     width: 1em;
     transform-origin: left top;
@@ -162,7 +162,7 @@
   .menu .bit-3::after {
     content: '';
     position: absolute;
-    bottom: 0.5em;
+    bottom: 0.5em !important;
     right: -0.15em;
     width: 1em;
     transform-origin: right top;
@@ -238,7 +238,7 @@
     padding: 50px;
     padding-top: 100px;
     font-size: 1.4em;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     overflow-y: scroll !important;
     cursor: normal;
   }
