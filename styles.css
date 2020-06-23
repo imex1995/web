@@ -1,0 +1,885 @@
+@font-face {
+  font-family: 'night';
+  src: url(fonts/night.ttf);
+}
+
+@font-face {
+  font-family: 'geo';
+  src: url(fonts/cabin.ttf);
+}
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: #FFE53B;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: #FFE53B;
+}
+
+::-webkit-selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: #FFE53B;
+}
+
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: night;
+  border: none;
+  font-weight: normal;
+}
+
+p {
+  font-family: geo;
+}
+
+.far {
+  color: white;
+}
+
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .button {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  button {
+    position: absolute;
+    left: 0;
+    background-color: black;
+    color: #FFE53B;
+    border: none;
+    font-family: night;
+    font-size: 1em;
+    height: 50px;
+    padding: 0 20px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .button-black {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    right: 75%;
+    background: black;
+    z-index: 0;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .button-active {
+    right: 0;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .desktop-hide {
+    display: none;
+  }
+  @-webkit-keyframes nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .nav-expand {
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    background: rgba(0, 0, 0, 0.5);
+    display: absolute;
+    top: -100%;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(20px);
+    -webkit-transition: 0.65s;
+    transition: 0.65s;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+            transition-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav {
+    z-index: 999 !important;
+    position: fixed;
+    top: 6vh;
+    right: 5vh;
+  }
+  .top-nav-desktop {
+    z-index: 999 !important;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: night;
+    top: 6vh;
+    right: 5vh;
+    opacity: 0;
+  }
+  .opaque {
+    -webkit-animation: nav 0.5s 1s both cubic-bezier(0.6, 0.1, 0.1, 1);
+            animation: nav 0.5s 1s both cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav-desktop a {
+    color: black !important;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  .menu {
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  .bit1,
+  .bit2,
+  .bit3 {
+    height: 5px;
+    top: 0;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background: white;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .bit1.bit10 {
+    top: calc(100% - 10px);
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    background: #fff;
+  }
+  .bit2.bit20 {
+    top: calc(50% - 5px);
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    background: #fff;
+  }
+  .bit3.bit30 {
+    background: #fff;
+  }
+  .nav-open {
+    top: 0;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav-open {
+    background: none;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .nav-expand-text {
+    padding: 10vh 0 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .nav-expand-text a p {
+    padding: 10px 0;
+    color: white;
+    font-size: 8em;
+    font-family: 'mermaid';
+  }
+  footer {
+    height: 175px;
+    width: 100%;
+    color: white;
+    font-family: "raleway";
+    position: absolute;
+    bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3em;
+  }
+  .footer-left {
+    margin-left: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-right {
+    margin-right: 8%;
+    width: 50%;
+    text-align: right;
+  }
+  .right-nav p {
+    cursor: pointer;
+  }
+  .logo {
+    position: fixed;
+    top: 5vh;
+    left: 4vh;
+    z-index: 100000;
+    color: white;
+    font-size: 4em;
+    font-family: mermaid;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .socials {
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 40px 10%;
+    color: black !important;
+    font-size: 0.8em;
+    letter-spacing: 0.5em;
+    z-index: 9999;
+    font-family: 'coco-light';
+  }
+  .social-icon {
+    color: black !important;
+    padding: 5px;
+  }
+  .social-icon:hover {
+    opacity: 0.5;
+  }
+  .filmfreeway {
+    width: 22px;
+    position: relative;
+    top: 4px;
+    left: -6px;
+  }
+  .main {
+    font-size: 12vw;
+    background-color: #FFE53B;
+  }
+  .main p {
+    margin: auto;
+    width: 72%;
+    font-family: night;
+  }
+  .black {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 0;
+  }
+  .icon {
+    z-index: 100;
+    position: absolute;
+    right: 15%;
+    top: 45%;
+    font-size: 6vw;
+  }
+  .icon:hover {
+    color: #FFE53B;
+  }
+  .video-card {
+    background-position: center;
+    background-size: cover;
+    color: white;
+  }
+  .viewall {
+    background-position: center;
+    background-size: cover;
+    background-color: #FFE53B;
+    text-align: center;
+  }
+  .viewall-card-text {
+    position: relative;
+    z-index: 10;
+    width: 27%;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  hr {
+    width: 30%;
+    position: absolute;
+    border: 2px solid white;
+    left: 0;
+  }
+  .card-text {
+    position: relative;
+    z-index: 10;
+    width: 60%;
+    left: 5%;
+  }
+  .card-text h1 {
+    font-weight: lighter;
+    font-size: 8vw;
+  }
+  .card-text p {
+    width: 80%;
+    font-size: 1.2em !important;
+  }
+  .sonsofdogs {
+    background-image: url(img/hdp/hdp.png);
+  }
+  .maceration {
+    background-image: url(img/MACERATION/maceration2.png);
+  }
+  .generalmitchell {
+    background-image: url(img/gm/gm.png);
+  }
+  .lya {
+    background-image: url(img/lya/lya.png);
+  }
+  .about-main, .connect-main {
+    height: 100vh;
+    background: #FFE53B;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-contain {
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-text {
+    width: 60%;
+    padding: 0 2%;
+  }
+  .about-text h1 {
+    font-size: 7vw;
+  }
+  .about-img {
+    width: 30%;
+    border: 15px black solid;
+  }
+  .productions-body {
+    overflow-y: scroll !important;
+  }
+  .productions-main {
+    padding: 10vh 0;
+    background: #FFE53B;
+  }
+  .productions-main h1 {
+    font-size: 7vw;
+    text-align: center;
+    padding: 5% 0;
+  }
+  .cards {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card {
+    width: 30%;
+    padding: 1.3%;
+  }
+  .card-img {
+    width: 100%;
+  }
+  .card-blurb {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+  }
+  .card-h1 {
+    font-size: 3vw !important;
+    text-align: left !important;
+  }
+  .contact-blurb p {
+    font-size: 10vw;
+  }
+  .contact-text h1 {
+    font-size: 8vw;
+    text-align: center;
+  }
+  .contact-text p {
+    font-family: geo !important;
+    font-size: 1vw !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #pp-nav {
+    display: none;
+  }
+  .button {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  button {
+    position: absolute;
+    left: 0;
+    background-color: black;
+    color: #FFE53B;
+    border: none;
+    font-family: night;
+    font-size: 1em;
+    height: 130px;
+    padding: 0 20px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .button-black {
+    height: 130px;
+    width: 100%;
+    position: relative;
+    background: black;
+    z-index: 0;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .button-active {
+    right: 0;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .mobilehide {
+    display: none !important;
+  }
+  @-webkit-keyframes nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .nav-expand {
+    background: black;
+    display: absolute;
+    top: -100%;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.65s;
+    transition: 0.65s;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+            transition-timing-function: cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav {
+    z-index: 999 !important;
+    position: fixed;
+    top: 6vh;
+    right: 5vh;
+  }
+  .top-nav-desktop {
+    z-index: 999 !important;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: night;
+    top: 6vh;
+    right: 5vh;
+    opacity: 0;
+  }
+  .opaque {
+    -webkit-animation: nav 0.5s 1s both cubic-bezier(0.6, 0.1, 0.1, 1);
+            animation: nav 0.5s 1s both cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav-desktop a {
+    color: black !important;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  .menu {
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  .bit1,
+  .bit2,
+  .bit3 {
+    height: 9px;
+    top: 0;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background: black;
+    border-radius: 0px;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    mix-blend-mode: saturation;
+    border: 2px solid #FFE53B;
+  }
+  .bit1.bit10 {
+    top: calc(65%);
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    background: #fff;
+  }
+  .bit2.bit20 {
+    top: calc(30%);
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    background: #fff;
+  }
+  .bit3.bit30 {
+    background: #fff;
+  }
+  .nav-open {
+    top: 0;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .top-nav-open {
+    background: none;
+    -webkit-transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.65s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .nav-expand-text {
+    padding: 15vh 0 0;
+    width: 90%;
+    position: relative;
+    text-align: right;
+  }
+  .nav-expand-text a p {
+    padding: 20px 0;
+    color: white;
+    font-size: 8em;
+    font-family: 'night';
+  }
+  footer {
+    height: 175px;
+    width: 100%;
+    color: white;
+    font-family: "raleway";
+    position: absolute;
+    bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3em;
+  }
+  .footer-left {
+    margin-left: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-right {
+    margin-right: 8%;
+    width: 50%;
+    text-align: right;
+  }
+  .right-nav p {
+    cursor: pointer;
+  }
+  .logo {
+    position: fixed;
+    top: 5vh;
+    left: 4vh;
+    z-index: 100000;
+    color: white;
+    font-size: 4em;
+    font-family: mermaid;
+    -webkit-transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+    transition: 0.8s cubic-bezier(0.6, 0.1, 0.1, 1);
+  }
+  .socials {
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 40px 10%;
+    color: black !important;
+    font-size: 0.8em;
+    letter-spacing: 0.5em;
+    z-index: 9999;
+    font-family: 'coco-light';
+  }
+  .social-icon {
+    color: black !important;
+    padding: 5px;
+  }
+  .social-icon:hover {
+    opacity: 0.5;
+  }
+  .filmfreeway {
+    width: 9vw;
+    position: relative;
+    top: 4px;
+    left: -6px;
+  }
+  .main {
+    font-size: 12vw;
+    background-color: #FFE53B;
+  }
+  .main p {
+    margin: auto;
+    width: 72%;
+    font-family: night;
+  }
+  .black {
+    height: 85vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 0;
+  }
+  .icon {
+    z-index: 100;
+    position: absolute;
+    right: 10%;
+    top: 85%;
+    font-size: 15vw;
+  }
+  .icon:hover {
+    color: #FFE53B;
+  }
+  .video-card {
+    background-position: center;
+    background-size: cover;
+    color: white;
+  }
+  .viewall {
+    background-position: center;
+    background-size: cover;
+    background-color: #FFE53B;
+    text-align: center;
+  }
+  .viewall-card-text {
+    position: relative;
+    z-index: 10;
+    width: 80%;
+    margin: auto;
+    font-size: 12vw;
+    text-align: center;
+  }
+  .viewall-card-text h1 {
+    margin-bottom: -200px;
+  }
+  hr {
+    width: 30%;
+    position: absolute;
+    border: 2px solid white;
+    left: 0;
+  }
+  .card-text {
+    position: relative;
+    z-index: 10;
+    width: 80%;
+    left: 10%;
+  }
+  .card-text h1 {
+    font-weight: lighter;
+    font-size: 18vw;
+  }
+  .card-text p {
+    width: 100%;
+    font-size: 4vw !important;
+  }
+  .sonsofdogs {
+    background-image: url(img/hdp/hdp.png);
+    background-size: unset;
+  }
+  .maceration {
+    background-image: url(img/MACERATION/maceration2.png);
+    background-size: unset;
+  }
+  .generalmitchell {
+    background-image: url(img/gm/gm.png);
+    background-size: unset;
+  }
+  .lya {
+    background-image: url(img/lya/lya.png);
+    background-size: unset;
+  }
+  .maceration .card-text h1 {
+    font-size: 13.5vw !important;
+  }
+  .about-main {
+    height: auto;
+    padding: 30% 0 20%;
+    background: #FFE53B;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-contain {
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-text {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .about-text h1 {
+    font-size: 16vw;
+  }
+  .about-text p {
+    font-size: 5vw;
+  }
+  .about-img {
+    width: 100%;
+    height: 100%;
+    border: 15px black solid;
+  }
+  .about-scroll {
+    overflow-y: scroll !important;
+  }
+  .productions-body {
+    overflow-y: scroll !important;
+  }
+  .productions-main {
+    padding: 10vh 0;
+    background: #FFE53B;
+  }
+  .productions-main h1 {
+    font-size: 11.5vw;
+    text-align: center;
+    padding: 5% 0;
+  }
+  .cards {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card {
+    width: 100%;
+    padding: 10% 0;
+  }
+  .card-img {
+    width: 100%;
+  }
+  .card-blurb {
+    font-size: 4vw;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+  }
+  .card-h1 {
+    font-size: 14vw !important;
+    text-align: left !important;
+  }
+  .contact-text {
+    margin: auto;
+    width: 80%;
+  }
+  .contact-text h1 {
+    font-size: 15vw;
+    text-align: center;
+  }
+  .contact-text p {
+    font-family: geo !important;
+    font-size: 5vw !important;
+    text-align: center;
+  }
+  .connect-main {
+    height: 100vh;
+    background: #FFE53B;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
