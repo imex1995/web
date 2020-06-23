@@ -448,6 +448,37 @@ a {
     font-size: 1vw !important;
     text-align: center;
   }
+  .cv-contain {
+    padding: 10% 0 0 0;
+    background-color: #FFE53B;
+    height: auto;
+    text-align: center;
+    line-height: 2.5em;
+  }
+  .cv-title {
+    font-size: 13vw;
+    line-height: 1em;
+  }
+  .cv-cat h1 {
+    font-size: 3vw;
+    line-height: 2.5em;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+  .cv-cat p {
+    font-size: 1vw;
+  }
+  .download {
+    padding: 5%;
+  }
+  .download a {
+    padding: 1%;
+    background: black;
+    color: white !important;
+    font-size: 2vw;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -881,5 +912,40 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .cv-contain {
+    padding: 50% 10% 0 10%;
+    background-color: #FFE53B;
+    height: auto;
+    text-align: center;
+    line-height: 2.5em;
+  }
+  .cv-title {
+    font-size: 25vw;
+    margin-bottom: 5%;
+  }
+  .cv-cat h1 {
+    padding-top: 10%;
+    font-size: 13vw;
+    line-height: 1em;
+  }
+  h2 {
+    padding-top: 10%;
+    font-size: 10vw;
+    line-height: 1em;
+  }
+  .cv-cat p {
+    font-size: 5vw;
+    line-height: 1.5em;
+  }
+  .download {
+    padding: 10%;
+  }
+  .download a {
+    padding: 3%;
+    background: black;
+    color: white;
+    font-size: 8vw;
+    text-align: center;
   }
 }
